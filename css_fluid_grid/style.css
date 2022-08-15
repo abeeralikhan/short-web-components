@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1em;
+}
+
+.grid-appear-first {
+  grid-row-start: 1;
+}
+
+.container {
+  width: min(1400px, 100% - 1em);
+  margin-inline: auto;
+}
+
+section {
+  padding-block: 2em;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+  }
+}
