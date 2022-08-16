@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Product preview card component</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="even-columns">
+            <div>
+              <img
+                class="desktop-image"
+                src="images/image-product-desktop.jpg"
+                alt=""
+              />
+              <img
+                class="mobile-image"
+                src="images/image-product-mobile.jpg"
+                alt=""
+              />
+            </div>
+            <div class="flow" data-type="info">
+              <header>
+                <p class="fs-300 ff-body text-neutral-300">P E R F U M E</p>
+              </header>
+              <h1
+                class="text-neutral-400 fw-bold ff-secondary fs-600"
+                data-type="heading"
+              >
+                Gabrielle Essence Eau De Parfum
+              </h1>
+              <p
+                class="text-neutral-300 ff-body fs-450"
+                data-type="description"
+              >
+                A floral, solar and voluptuous interpretation composed by
+                Olivier Polge, Perfumer-Creator for the House of CHANEL.
+              </p>
+              <h2
+                class="main-price | text-accent-400 fw-bold ff-secondary fs-600"
+              >
+                $149.9
+              </h2>
+              <button
+                class="button | bg-accent-400 ff-body fs-400 text-neutral-100 fw-bold"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
