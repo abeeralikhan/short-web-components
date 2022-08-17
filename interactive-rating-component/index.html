@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <title>Interactive rating component</title>
+    <title>Interactive rating</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,45 +18,74 @@
     <main>
       <section>
         <div class="container">
-          <div class="rating-state">
+          <div class="rating-state flow">
             <img src="./images/icon-star.svg" alt="" class="star-icon bubble" />
-            <h1 class="text-neutral-100 fs-700 fw-bold">How did we do?</h1>
-            <p class="text-neutral-400 fs-400 fw-regular">
+            <h1
+              class="text-neutral-100 fs-700 fw-bold"
+              data-type="main-heading"
+            >
+              How did we do?
+            </h1>
+            <p class="text-neutral-200 fs-400 fw-regular">
               Please let us know how we did with your support request. All
               feedback is appreciated to help us improve our offering!
             </p>
             <div class="rating-levels">
-              <div class="fs-400 text-neutral-400 fw-bold bubble rating">1</div>
-              <div class="fs-400 text-neutral-400 fw-bold bubble rating">2</div>
-              <div class="fs-400 text-neutral-400 fw-bold bubble rating">3</div>
-              <div class="fs-400 text-neutral-400 fw-bold bubble rating">4</div>
-              <div class="fs-400 text-neutral-400 fw-bold bubble rating">5</div>
+              <div
+                class="rating-bubble | fs-400 text-neutral-400 fw-bold bubble ease-out-effect"
+              >
+                1
+              </div>
+              <div
+                class="rating-bubble | fs-400 text-neutral-400 fw-bold bubble ease-out-effect"
+              >
+                2
+              </div>
+              <div
+                class="rating-bubble | fs-400 text-neutral-400 fw-bold bubble ease-out-effect"
+              >
+                3
+              </div>
+              <div
+                class="rating-bubble | fs-400 text-neutral-400 fw-bold bubble ease-out-effect"
+              >
+                4
+              </div>
+              <div
+                class="rating-bubble | fs-400 text-neutral-400 fw-bold bubble ease-out-effect"
+              >
+                5
+              </div>
             </div>
             <button
-              class="button bg-accent-400 text-neutral-100 fw-regular oval-radius"
+              class="button | bg-accent-400 text-neutral-100 fw-bold oval-radius ease-out-effect"
             >
               SUBMIT
             </button>
           </div>
-          <div class="thankyou-state"></div>
+          <div class="thankyou-state no-display">
+            <img
+              class="thankyou-image"
+              src="./images/illustration-thank-you.svg"
+              alt=""
+            />
+            <h2 class="oval-radius text-accent-400 fs-400 fw-regular">
+              You selected <span class="selected-rating">4</span> out of 5
+            </h2>
+            <h1
+              class="text-neutral-100 fs-700 fw-bold"
+              data-type="second-heading"
+            >
+              Thank you!
+            </h1>
+            <p class="text-neutral-200 fs-400 fw-regular">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don't hesitate to get in touch!
+            </p>
+          </div>
         </div>
       </section>
     </main>
-    <!-- Rating state start -->
-
-    <!-- How did we do? Please let us know how we did with your support request. All -->
-    <!-- feedback is appreciated to help us improve our offering! 1 2 3 4 5 Submit -->
-
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    <!-- You selected -->
-    <!-- Add rating here -->
-    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If -->
-    <!-- you ever need more support, don’t hesitate to get in touch! -->
-
-    <!-- Thank you state end -->
     <script src="./app.js"></script>
   </body>
 </html>

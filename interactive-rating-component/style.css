@@ -24,8 +24,8 @@
   --fs-400: 0.9375rem;
   --fs-500: 1rem;
   --fs-600: 1.5rem;
-  --fs-700: 2rem;
-  --fs-800: 2rem;
+  --fs-700: 1.75rem;
+  --fs-800: 3rem;
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
@@ -106,32 +106,98 @@ svg {
 /* general styling */
 
 body {
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-primary-900);
   font-family: var(--ff-primary);
 }
 
-.rating {
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    0deg,
+    rgb(28, 31, 34) 0%,
+    rgba(37, 45, 48, 1) 100%
+  );
+  width: 25.5rem;
+  padding: 1.75rem 2rem;
+  height: 25rem;
+  border-radius: 7%;
+}
+
+.thankyou-image {
+  margin-inline: auto;
+  margin-top: 1rem;
+}
+
+h1[data-type="main-heading"] {
+  margin-bottom: -1.35rem !important;
+}
+
+h1[data-type="second-heading"] {
+  margin-bottom: 0.55rem !important;
+}
+
+.rating-levels {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
+  justify-content: space-between;
+}
+
+.rating-bubble {
+  cursor: pointer;
+  text-align: center;
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.rating-bubble:hover {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-400);
+}
+
+.selected {
+  background-color: var(--clr-neutral-200) !important;
+  color: var(--clr-neutral-100) !important;
+}
+
+.thankyou-state {
+  text-align: center;
+}
+
+.rating-state > p,
+.thankyou-state > p {
+  width: 35ch;
+}
+
+.thankyou-state > p {
+  text-align: center;
+}
+
+.thankyou-state > h2 {
+  background-color: var(--clr-neutral-150);
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.3em 1.25em;
+  margin-block: 1.75rem;
 }
 
 /* button */
 
 .button {
+  cursor: pointer;
   border: 1px solid black;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
   width: 100%;
+  letter-spacing: 0.1rem;
+}
+
+.button:hover {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-accent-400);
 }
 
 /* Utility classes */
-
-.oval-radius {
-  border-radius: 100vmax;
-}
-
 .text-accent-400 {
   color: var(--clr-accent-400);
 }
@@ -201,4 +267,21 @@ body {
   border-radius: 100%;
   background-color: var(--clr-neutral-150);
   padding: 1rem;
+}
+
+.ease-out-effect {
+  transition: 0.2s ease-out;
+}
+
+.oval-radius {
+  border-radius: 100vmax;
+}
+
+:where(.flow > :not(:first-child)) {
+  --flow-size: 1.75rem;
+  margin-top: var(--flow-size);
+}
+
+.no-display {
+  display: none;
 }
