@@ -126,6 +126,19 @@ body {
   border-radius: 7%;
 }
 
+.back-button {
+  cursor: pointer;
+  width: 3rem;
+  position: absolute;
+  top: 2rem;
+  background: transparent;
+  transform: rotate(180deg);
+}
+
+.back-button:hover {
+  opacity: 0.7;
+}
+
 .thankyou-image {
   margin-inline: auto;
   margin-top: 1rem;
