@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>QR code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet"> 
+  <style>
+    :root {
+      --border-radius: 13px;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: hsl(220, 15%, 55%);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: hsl(0, 0%, 100%);
+      width: 15em;
+      height: 21em;
+      padding: 0.70rem;
+      border-radius: var(--border-radius);
+    }
+
+    article h1 {
+      color: hsl(218, 44%, 22%);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    article p {
+      color: hsl(220, 15%, 55%);
+      font-weight: 400;
+      font-size: 0.9375rem;
+      width: 20ch;
+      margin-inline: auto;
+      /* width: 5ch; */
+    }
+
+    article p,
+    article h1 {
+      text-align: center;
+      margin-top: 0.6rem;
+    }
+
+    article img {
+      border-radius: var(--border-radius);
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+    <div class="container">
+      <img src="./images/image-qr-code.png" alt="QR code">
+      <h1>Made by @abeerkh4n</h1>
+      <p>Scan the QR code to visit my twitter profile</p>
+    </div>
+  </article>
+</body>
+</html>
