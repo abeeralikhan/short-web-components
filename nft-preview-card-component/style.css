@@ -104,9 +104,6 @@ body {
 }
 
 /* main image */
-
-.nft-img {
-}
 .nft-img:hover::before {
   content: "";
   cursor: pointer;
