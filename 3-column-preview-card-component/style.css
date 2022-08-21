@@ -1,0 +1,239 @@
+:root {
+  --clr-main-01: hsl(31, 77%, 52%);
+  --clr-main-02: hsl(184, 100%, 22%);
+  --clr-main-03: hsl(179, 100%, 13%);
+
+  --clr-second-01: hsla(0, 0%, 100%, 0.75);
+  --clr-second-02: hsl(0, 0%, 95%);
+
+  --clr-main-bg: var(--clr-second-02);
+  --clr-paragraph: var(--clr-second-01);
+  --clr-heading: var(--clr-second-02);
+  --clr-button: var(--clr-second-02);
+
+  --fs-p: 0.9375rem;
+  --fs-heading: 2.5rem;
+
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-heading: "Big Shoulders Display", cursive;
+
+  --fw-regular: 400;
+  --fw-heading: 700;
+
+  --mg-top-01: 1.5rem;
+  --mg-top-04: 5rem;
+
+  --mg-top-button: var(--mg-top-01);
+}
+
+@media (min-width: 60em) {
+  :root {
+    --mg-top-button: var(--mg-top-04);
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  /* height: 100%; */
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-main-bg);
+  height: 100vh;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-block: 2rem;
+}
+
+/* content */
+
+.content {
+  padding: 2.5rem;
+  /* width: 19rem; */
+}
+
+.grid {
+  display: grid;
+  grid-auto-columns: 19rem;
+}
+
+@media (min-width: 60em) {
+  .grid {
+    grid-auto-flow: column;
+    grid-auto-columns: 19rem;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 40em) {
+  .grid {
+    grid-template-columns: repeat(2, 19rem);
+  }
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5em 1.5em;
+  border-radius: 100vmax;
+  border: 2px solid var(--clr-button);
+}
+
+.button:hover {
+  color: var(--clr-button);
+}
+
+.btn1:hover {
+  background-color: var(--clr-main-01);
+}
+
+.btn2:hover {
+  background-color: var(--clr-main-02);
+}
+
+.btn3:hover {
+  background-color: var(--clr-main-03);
+}
+/* utility */
+
+.bg-main-01 {
+  background-color: var(--clr-main-01);
+}
+.bg-main-02 {
+  background-color: var(--clr-main-02);
+}
+.bg-main-03 {
+  background-color: var(--clr-main-03);
+}
+.bg-second-01 {
+  background-color: var(--clr-second-01);
+}
+.bg-second-02 {
+  background-color: var(--clr-second-02);
+}
+.bg-main {
+  background-color: var(--clr-main-bg);
+}
+.bg-btn {
+  background-color: var(--clr-button);
+}
+
+.txt-main-01 {
+  color: var(--clr-main-01);
+}
+.txt-main-02 {
+  color: var(--clr-main-02);
+}
+.txt-main-03 {
+  color: var(--clr-main-03);
+}
+.txt-second-01 {
+  color: var(--clr-second-01);
+}
+.txt-second-02 {
+  color: var(--clr-second-02);
+}
+.txt-main {
+  color: var(--clr-paragraph);
+}
+.txt-heading {
+  color: var(--clr-heading);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-heading {
+  font-weight: var(--fw-heading);
+}
+
+.ff-heading {
+  font-family: var(--ff-heading) !important;
+}
+
+.mg-top-01 {
+  margin-top: var(--mg-top-01);
+}
+.mg-top-button {
+  margin-top: var(--mg-top-button);
+}
+
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+.fs-main {
+  font-size: var(--fs-p);
+}
