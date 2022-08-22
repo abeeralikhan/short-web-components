@@ -1,0 +1,289 @@
+:root {
+  --clr-main-01: hsl(273, 75%, 66%);
+  --clr-main-02: hsl(240, 73%, 65%);
+  --clr-main-03: hsl(238, 29%, 16%);
+  --clr-main-04: hsl(14, 88%, 65%);
+
+  --clr-second-01: hsl(237, 12%, 33%);
+  --clr-second-02: hsl(240, 6%, 50%);
+  --clr-second-03: hsl(240, 5%, 91%);
+
+  --clr-bg-grad: linear-gradient(
+    to bottom,
+    #af67e9,
+    #9f67e9,
+    #8d66e9,
+    #7a66e8,
+    #6565e7
+  );
+  --clr-bg-card: white;
+
+  --clr-heading: var(--clr-main-03);
+  --clr-title-inactive: var(--clr-second-01);
+  --clr-title-active: var(--clr-main-03);
+  --clr-panel: var(--clr-second-02);
+
+  --clr-divider: var(--clr-second-03);
+
+  --fs-txt: 0.75rem;
+  --fs-heading: 2rem;
+
+  --ff-primary: "Kumbh Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  /* height: 100%; */
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-primary);
+}
+
+main {
+  background: var(--clr-bg-grad);
+  /* background: white; */
+
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(800px, 100% - 3rem);
+  box-shadow: 0 40px 50px 10px hsla(0, 0%, 0%, 0.26);
+}
+/* grid */
+
+.even-columns {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* grid-template-rows: 1fr 2fr; */
+}
+
+.banner-desktop {
+  display: none;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .banner-desktop {
+    display: block;
+  }
+}
+/* banner */
+.banner {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+@media (min-width: 50em) {
+  .illustration-box {
+    z-index: 100;
+    /* top: 14rem; */
+    top: calc(50% + 3rem);
+    transform: translate(0, -50%);
+    left: -8.5rem;
+  }
+
+  .illustration-box,
+  .illustration,
+  .illustration-bg {
+    position: absolute;
+    /* transform: scale(1.5); */
+  }
+  .illustration {
+    z-index: 10;
+    top: calc(50%);
+    transform: translate(0, -50%);
+
+    left: -5.5rem;
+  }
+
+  .illustration-bg {
+    z-index: 1;
+    top: 5rem;
+    left: -5.5rem;
+    top: calc(50%);
+    transform: translate(0, -50%);
+  }
+}
+
+/* accordion */
+
+.accord {
+  position: relative;
+  padding-inline: 2rem;
+}
+
+@media (min-width: 50em) {
+  .accord {
+    max-width: 22em;
+  }
+}
+
+.accord > :first-child {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.active {
+  color: var(--clr-title-active) !important;
+  font-weight: var(--fw-bold) !important;
+}
+
+.accordion::after {
+  content: url(./images/icon-arrow-down.svg);
+  position: absolute;
+  right: 0.9rem;
+  z-index: 100;
+}
+
+.active::after {
+  content: url(./images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  margin-left: 0.1rem;
+}
+
+.button:hover {
+  color: var(--clr-main-04);
+}
+
+.panel {
+  overflow: hidden;
+  margin-top: 0.4rem;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* .active::after {
+  content: url(./images/icon-arrow-up.svg);
+  position: absolute;
+  right: 0.9rem;
+  z-index: 100;
+} */
+
+.divider {
+  position: relative;
+  border-top: 1px solid var(--clr-divider);
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+/* utility */
+
+.bg-card {
+  background-color: var(--clr-bg-card);
+}
+
+.txt-heading {
+  color: var(--clr-heading);
+}
+.txt-accord-title {
+  color: var(--clr-title-inactive);
+}
+.txt-accord-panel {
+  color: var(--clr-panel);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+.fs-main {
+  font-size: var(--fs-txt);
+}
+
+.border-rad-full {
+  border-radius: 10px;
+}
+
+.padding-block-1 {
+  padding-block: 3rem;
+}
