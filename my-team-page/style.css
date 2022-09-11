@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --ff-primary: "Poppins", sans-serif;
+
+  --clr-400: #fafafa;
+  --clr-500: #000000;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-400: 2.25rem;
+  --fs-500: 1.125rem;
+  --fs-600: 0.875rem;
+  --fs-700: 0.625rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Mobile */
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.container {
+  width: min(1000px, 100% - 2rem);
+  margin: 5rem auto;
+}
+
+header {
+  margin-bottom: -1rem;
+}
+
+header h1 {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2rem;
+}
+
+header h2 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+  margin-bottom: 0.7rem;
+}
+
+header p {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-regular);
+  width: 39ch;
+}
+
+article h2 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semi-bold);
+}
+
+article p {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-regular);
+}
+
+.team-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "one ."
+    "one two"
+    "three two"
+    "three four"
+    "five four"
+    "five six"
+    ". six";
+}
+
+.image {
+  border-radius: 5%;
+}
+
+.image1 {
+  grid-area: one;
+}
+.image2 {
+  grid-area: two;
+}
+.image3 {
+  grid-area: three;
+}
+.image4 {
+  grid-area: four;
+}
+.image5 {
+  grid-area: five;
+}
+.image6 {
+  grid-area: six;
+}
+
+@media (min-width: 50em) {
+  .team-grid {
+    display: grid;
+    gap: 5rem;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+      "one . two"
+      "one three two"
+      "four three five"
+      "four six five"
+      ". six .";
+  }
+
+  .info-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header p {
+    font-size: var(--fs-500);
+  }
+
+  article h2 {
+    font-size: var(--fs-500);
+  }
+
+  article p {
+    font-size: var(--fs-600);
+  }
+}
